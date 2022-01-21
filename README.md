@@ -4,7 +4,7 @@
  
  ## Uso de API
 
-Link de collection Postman :
+Link de collection Postman (local): https://www.getpostman.com/collections/5359328c54e58f07a532
 
 ### Servicio que crea un producto: 
 
