@@ -50,8 +50,11 @@ class ShoppingCartServiceImpl(@Autowired private val repository: ShoppingCartRep
 
     override fun updateProductToCart(id: UUID, productCart: UpdateProductToCartRequestDTO): ShoppingCartProductResponseDTO {
         val shoppingCart = repository.findById(id).get()
-        val product = productRepository.findById(productCart.productId).get()
-        shoppingCart.products.forEach { if (it.id == productCart.productId) it.quantity = product.quantity }
+        var product = productRepository.findById(productCart.productId).get()
+        shoppingCart.products.forEach{
+            product.quantity = productCart.quantity
+            if (it.id == productCart.productId)  it.quantity = productCart.quantity
+        }
         repository.save(shoppingCart)
         return ShoppingCartProductResponseDTO.ProductAndCartIdFromShoppingCartProductResponseDTO(product, id)
     }
