@@ -2,9 +2,14 @@
  
  Api Rest modulo de carrito de compras
  
+Link de collection Postman (local): https://www.getpostman.com/collections/5359328c54e58f07a532
+
+Lisk de collection Postman (EC2 AWS) : https://www.getpostman.com/collections/c378a7da88817e55e440
+
+#### La api se encuentra en un ec2 de aws o se puede ejecutar localmente 
+
  ## Uso de API
 
-Link de collection Postman (local): https://www.getpostman.com/collections/5359328c54e58f07a532
 
 ### Servicio que crea un producto: 
 
